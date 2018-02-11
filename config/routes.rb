@@ -7,6 +7,8 @@ root 'posts#index', as: 'home'
 #regular route
 get 'about' => 'page#about', as: 'about'
 
-resources :posts
+resources :posts do
+  resources :comments
+end
 
 end
